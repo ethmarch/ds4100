@@ -5,7 +5,7 @@ library(XML)
 ## Args: NA
 ## Returns: a message saying whether or not the data has already been imported
 importData <- function() {
-  if (!exists("farmers_markets")) {
+  if (!exists("senators_df")) {
     url <- "http://ds4100.weebly.com/uploads/8/6/5/9/8659576/senators.xml"
     senators_df <<- xmlToDataFrame(url)
     print("Data imported")
